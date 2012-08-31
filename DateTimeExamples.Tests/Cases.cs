@@ -15,15 +15,21 @@ namespace DateTimeExamples.Tests
         }
 
         [Test]
-        public void January_Have_31_Days()
+        public void DaysOf_January_Should_Be_31()
         {
             DaysInMonth.Of(January.In(1973)).Should().Be(31);
         }
 
         [Test]
-        public void DaysOf_February_In_1976_Should_be_29()
+        public void DaysOf_February_In_1976_Should_Be_29()
         {
             DaysInMonth.Of(February.In(1976)).Should().Be(29);
+        }
+
+        [Test]
+        public void DaysOf_February_In_1973_Should_Be_28()
+        {
+            DaysInMonth.Of(February.In(1973)).Should().Be(28);
         }
 
 
