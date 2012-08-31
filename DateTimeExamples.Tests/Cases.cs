@@ -11,7 +11,7 @@ namespace DateTimeExamples.Tests
         [Test]
         public void Should_Return_Tuesday()
         {
-            var sut = (23.January(1973)).DayName.Should().Be("Tuesday");
+            (23.January(1973)).DayName.Should().Be("Tuesday");
         }
 
         [Test]

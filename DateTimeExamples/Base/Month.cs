@@ -16,9 +16,7 @@ namespace DateTimeExamples.Base
             _day = day;
             _month = month;
         }
-
-
-
+        
         public string DayName { get { return new DateTime(_year, _month, _day).DayOfWeek.ToString(); } }
     }
 }
