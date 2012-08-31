@@ -5,17 +5,18 @@ namespace DateTimeExamples.Base
 {
     public class Month<T> where T : class, IFindMonth
     {
-        public int _Month { get; set; }
-        public int Year { get; set; }
-        public int Day { get; set; }
+        private readonly int _month;
+        private readonly int _year;
+        private readonly int _day;
+        
+        public string DayName { get { return new DateTime(_year, _month, _day).DayOfWeek.ToString(); } }
+        public int DaysInMonth { get { return DateTime.DaysInMonth(_year, _month); } }
 
-        public string DayName { get { return new DateTime(Year, _Month, Day).DayOfWeek.ToString(); } }
-        public int DaysInMonth { get { return DateTime.DaysInMonth(Year, _Month); } }
-
-        public Month(int year, int day)
+        public Month(int year, int month, int day)
         {
-            Year = year;
-            Day = day;
+            _year = year;
+            _day = day;
+            _month = month;
         }
     }
 }

@@ -6,11 +6,10 @@ namespace DateTimeExamples.Types
 {
     public class April : Month<April>, IFindMonth
     {
-        public April(int year, int day)
-            : base(year, day)
+        public April(int year, int month, int day)
+            : base(year,month, day)
         {
             if (day >= 31) throw new AprilComplaint();
-            _Month = 2;
         }
     }
 }

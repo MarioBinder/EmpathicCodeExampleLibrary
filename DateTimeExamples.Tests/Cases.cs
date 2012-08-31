@@ -13,6 +13,15 @@ namespace DateTimeExamples.Tests
             sut.Should().Be("Tuesday");
         }
 
+        [Test]
+        public void January_Have_31_Days()
+        {
+            var sut = (23.January(1973));
+            sut.DaysInMonth.Should().Be(31);
+        }
+
+
+
 
     }
 }

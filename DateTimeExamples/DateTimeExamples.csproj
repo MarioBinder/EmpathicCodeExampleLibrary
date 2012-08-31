@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\Month.cs" />
+    <Compile Include="Base\Year.cs" />
     <Compile Include="Contracts\IFindMonth.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

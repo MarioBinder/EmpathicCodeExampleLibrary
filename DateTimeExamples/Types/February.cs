@@ -7,11 +7,10 @@ namespace DateTimeExamples.Types
 {
     public class February : Month<February>, IFindMonth
     {
-        public February(int year, int day)
-            : base(year, day)
+        public February(int year, int month, int day)
+            : base(year, month, day)
         {
             if ((DateTime.IsLeapYear(year) && day >= 29) || day > 28) throw new FebruaryComplaint();
-            _Month = 2;
         }
     }
 }
