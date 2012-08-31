@@ -2,7 +2,7 @@
 using DateTimeExamples.Base;
 using DateTimeExamples.Contracts;
 
-namespace DateTimeExamples.Types
+namespace DateTimeExamples.Types.Months
 {
     public class March : Month<March>, IFindMonth
     {

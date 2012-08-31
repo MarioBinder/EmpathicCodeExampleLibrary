@@ -8,15 +8,17 @@ namespace DateTimeExamples.Base
         private readonly int _month;
         private readonly int _year;
         private readonly int _day;
-        
-        public string DayName { get { return new DateTime(_year, _month, _day).DayOfWeek.ToString(); } }
-        public int DaysInMonth { get { return DateTime.DaysInMonth(_year, _month); } }
 
+        public Month() { }
         public Month(int year, int month, int day)
         {
             _year = year;
             _day = day;
             _month = month;
         }
+
+
+
+        public string DayName { get { return new DateTime(_year, _month, _day).DayOfWeek.ToString(); } }
     }
 }

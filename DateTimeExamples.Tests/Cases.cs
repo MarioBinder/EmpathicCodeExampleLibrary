@@ -1,4 +1,6 @@
 ﻿using DateTimeExamples.Extensions;
+using DateTimeExamples.Types;
+using DateTimeExamples.Types.Months;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -9,17 +11,20 @@ namespace DateTimeExamples.Tests
         [Test]
         public void Should_Return_Tuesday()
         {
-            var sut = (23.January(1973)).DayName;
-            sut.Should().Be("Tuesday");
+            var sut = (23.January(1973)).DayName.Should().Be("Tuesday");
         }
 
         [Test]
         public void January_Have_31_Days()
         {
-            var sut = (23.January(1973));
-            sut.DaysInMonth.Should().Be(31);
+            DaysInMonth.Of(January.In(1973)).Should().Be(31);
         }
 
+        [Test]
+        public void DaysOf_February_In_1976_Should_be_29()
+        {
+            DaysInMonth.Of(February.In(1976)).Should().Be(29);
+        }
 
 
 
