@@ -6,18 +6,16 @@ namespace DateTimeExamples.Types.Months
 {
     public class January : Month<January>, IFindMonth
     {
-        public int Year { get; set; }
-        public int Month { get; set; }
+        public int Month { get { return 1; } }
         
         public static January In(int year)
         {
-            return new January(year, 1);
+            return new January(year);
         }
 
-        public January(int year, int month)
+        public January(int year)
         {
             Year = year;
-            Month = month;
         }
         public January(int year, int month, int day)
             : base(year, month, day)

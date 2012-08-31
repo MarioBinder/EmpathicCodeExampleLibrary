@@ -31,8 +31,5 @@ namespace DateTimeExamples.Tests
         {
             DaysInMonth.Of(February.In(1973)).Should().Be(28);
         }
-
-
-
     }
 }

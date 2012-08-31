@@ -6,8 +6,7 @@ namespace DateTimeExamples.Types.Months
 {
     public class March : Month<March>, IFindMonth
     {
-        public int Year { get; set; }
-        public int Month { get; set; }
+        public int Month { get { return 3; } }
 
         public March(int year, int month, int day)
             : base(year, month, day)
