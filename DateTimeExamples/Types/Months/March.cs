@@ -4,7 +4,7 @@ using DateTimeExamples.Contracts;
 
 namespace DateTimeExamples.Types.Months
 {
-    public class March : Month<March>, IFindMonth
+    public class March : Month<March>, IFindMonths
     {
         public int Month { get { return 3; } }
 

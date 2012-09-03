@@ -1,6 +1,4 @@
-﻿using DateTimeExamples.Types.Months;
-
-namespace DateTimeExamples.Extensions
+﻿namespace DateTimeExamples.Types.Months.Extensions
 {
     public static class AprilExtensions
     {

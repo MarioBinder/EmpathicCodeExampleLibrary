@@ -1,4 +1,6 @@
-﻿namespace DateTimeExamples.Extensions
+﻿using System;
+
+namespace DateTimeExamples.Types.Months.Extensions
 {
     public static class MonthExtensions
     {

@@ -3,7 +3,7 @@ using DateTimeExamples.Contracts;
 
 namespace DateTimeExamples.Base
 {
-    public class Month<T> where T : class, IFindMonth
+    public class Month<T> where T : class, IFindMonths
     {
         public int Year { get; set; }
 

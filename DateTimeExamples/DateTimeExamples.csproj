@@ -42,18 +42,24 @@
   <ItemGroup>
     <Compile Include="Base\Month.cs" />
     <Compile Include="Base\Year.cs" />
-    <Compile Include="Contracts\IFindMonth.cs" />
-    <Compile Include="Extensions\AprilExtensions.cs" />
-    <Compile Include="Extensions\MonthExtensions.cs" />
-    <Compile Include="Extensions\FebruaryExtensions.cs" />
-    <Compile Include="Extensions\JanuaryExtensions.cs" />
-    <Compile Include="Extensions\MarchExtensions.cs" />
+    <Compile Include="Contracts\IFindDays.cs" />
+    <Compile Include="Contracts\IFindMonths.cs" />
+    <Compile Include="Types\Days\Day.cs" />
+    <Compile Include="Types\Days\Extensions\MondayExtensions.cs" />
+    <Compile Include="Types\Months\Extensions\AprilExtensions.cs" />
+    <Compile Include="Types\Months\Extensions\MonthExtensions.cs" />
+    <Compile Include="Types\Months\Extensions\FebruaryExtensions.cs" />
+    <Compile Include="Types\Months\Extensions\JanuaryExtensions.cs" />
+    <Compile Include="Types\Months\Extensions\MarchExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\Days\Monday.cs" />
+    <Compile Include="Types\Days\Tuesday.cs" />
     <Compile Include="Types\Months\April.cs" />
     <Compile Include="Types\DaysInMonth.cs" />
     <Compile Include="Types\Months\February.cs" />
     <Compile Include="Types\Months\January.cs" />
     <Compile Include="Types\Months\March.cs" />
+    <Compile Include="Types\Week\WeekExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Complaints\Complaints.csproj">

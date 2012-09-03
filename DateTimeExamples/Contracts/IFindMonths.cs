@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace DateTimeExamples.Contracts
+﻿namespace DateTimeExamples.Contracts
 {
-    public interface IFindMonth
+    public interface IFindMonths
     {
         int Year { get; set; }
         int Month { get; }
