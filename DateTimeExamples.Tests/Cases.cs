@@ -52,20 +52,25 @@ namespace DateTimeExamples.Tests
         {
             // Make.An.Appointment(Monday.This().Week());
 
-            Monday.This().Week()
-                .Should().Be(new DateTime(2012, 08, 27));
+            Monday.ThisWeek()
+                .Should().Be(new DateTime(2012, 09, 03));
+
+            Tuesday.NextWeek()
+                .Should().Be(new DateTime(2012, 09, 11));
             
-            //Monday.Next().Week()
-            //    .Should().Be(new DateTime(2012, 09, 03));
+
+            Monday.NextWeek()
+                .Should().Be(new DateTime(2012, 09, 10));
+
+            Tuesday.ThisWeek()
+                .Should().Be(new DateTime(2012, 09, 04));
             
 
-            //Tuesday.This().Week()
-            //               .Should().Be(new DateTime(2012, 08, 28));
-
-            //Tuesday.Next().Week()
-            //               .Should().Be(new DateTime(2012, 09, 03));
-
-
+            Monday.InTwoWeeks()
+                .Should().Be(new DateTime(2012, 09, 17));
+            
+            Tuesday.InTwoWeeks()
+                .Should().Be(new DateTime(2012, 09, 18));
 
 
         }
