@@ -1,10 +1,8 @@
 ﻿using System;
 using DateTimeExamples.Types;
 using DateTimeExamples.Types.Days;
-using DateTimeExamples.Types.Days.Extensions;
 using DateTimeExamples.Types.Months;
 using DateTimeExamples.Types.Months.Extensions;
-using DateTimeExamples.Types.Week;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -50,27 +48,29 @@ namespace DateTimeExamples.Tests
         [Test]
         public void Possible_WeekDay_Cases()
         {
-            // Make.An.Appointment(Monday.This().Week());
+            // Make.Appointment(Monday.This().Week());
 
             Monday.ThisWeek()
-                .Should().Be(new DateTime(2012, 09, 03));
-
-            Tuesday.NextWeek()
-                .Should().Be(new DateTime(2012, 09, 11));
-            
-
-            Monday.NextWeek()
                 .Should().Be(new DateTime(2012, 09, 10));
 
-            Tuesday.ThisWeek()
-                .Should().Be(new DateTime(2012, 09, 04));
-            
+            Tuesday.NextWeek()
+                .Should().Be(new DateTime(2012, 09, 18));
 
-            Monday.InTwoWeeks()
+
+            Monday.NextWeek()
                 .Should().Be(new DateTime(2012, 09, 17));
             
+
+            Tuesday.ThisWeek()
+                .Should().Be(new DateTime(2012, 09, 11));
+
+
+            Monday.InTwoWeeks()
+                .Should().Be(new DateTime(2012, 09, 24));
+            
+
             Tuesday.InTwoWeeks()
-                .Should().Be(new DateTime(2012, 09, 18));
+                .Should().Be(new DateTime(2012, 09, 25));
 
 
         }
